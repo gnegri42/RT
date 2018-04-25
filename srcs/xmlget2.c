@@ -6,7 +6,7 @@
 /*   By: mgreil <mgreil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 16:22:08 by mgreil            #+#    #+#             */
-/*   Updated: 2018/04/24 15:25:42 by mgreil           ###   ########.fr       */
+/*   Updated: 2018/04/25 15:02:27 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@ static void		xml_get_one_obj_pt2(xmlNodePtr cur, t_env *e, t_obj *obj)
 		cur->xmlChildrenNode, 1);
 	if ((!xmlStrcmp(cur->name, (const xmlChar *)"rad")) ||
 			(!xmlStrcmp(cur->name, (const xmlChar *)"intensity")))
-		obj->rad = ft_atoi(str);
+		obj->rad = (str != NULL) ? ft_atoi(str) : 0;
 	if ((!xmlStrcmp(cur->name, (const xmlChar *)"direction")))
 		obj->dir = xml_get_vec(cur->xmlChildrenNode, e);
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"color")))
 		obj->color = xml_get_color(cur->xmlChildrenNode, e);
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"texture")))
-		obj->num_texture = ft_atoi(str);
+		obj->num_texture = (str != NULL) ? ft_atoi(str) : 0;
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"bump")))
-		obj->bump = ft_atof(str);
+		obj->bump = (str != NULL) ? ft_atof(str) : 0;
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"reflection")))
-		obj->refl = ft_atoi(str);
+		obj->refl = (str != NULL) ? ft_atoi(str) : 0;
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"refraction")))
-		obj->refr = ft_atof(str);
+		obj->refr = (str != NULL) ? ft_atof(str) : 0;
 	else if ((!xmlStrcmp(cur->name, (const xmlChar *)"n_refr")))
-		obj->n_refr = ft_atof(str);
+		obj->n_refr = (str != NULL) ? ft_atof(str) : 0;
 	free(str);
 }
 
