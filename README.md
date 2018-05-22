@@ -21,6 +21,6 @@ Plusieurs options ont été ajoutées à ce programme :
 - Perturbation de la limite
 
 ![Plan quadrillé](examples/01.png "Quadrillage")
-![Reflexion infini](examples/02.png "Reflexion")
+![Reflexion infini](examples/02.png "Reflexion + anti-aliasing")
 ![Sphere transparente](examples/03.png "Transparence")
 ![Plusieurs textures](examples/04.png "Textures")
