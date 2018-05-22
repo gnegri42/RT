@@ -20,7 +20,7 @@ Plusieurs options ont été ajoutées à ce programme :
 - Textures, bruit de perlin
 - Perturbation de la limite
 
-![Plan cadrillé](examples/01.png "Cadrillage")
+![Plan quadrillé](examples/01.png "Quadrillage")
 ![Reflexion infini](examples/02.png "Reflexion")
 ![Sphere transparente](examples/03.png "Transparence")
 ![Plusieurs textures](examples/04.png "Textures")
